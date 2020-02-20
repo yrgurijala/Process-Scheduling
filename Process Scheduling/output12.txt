@@ -1,0 +1,62 @@
+Process 3 starts at time 0 ms
+Process Table:
+There are no active processes.
+
+Process 5 starts at time 3 ms
+Process Table:
+Process 3 is RUNNING.
+
+Process 7 starts at time 5 ms
+Process Table:
+Process 3 is RUNNING.
+Process 5 is RUNNING.
+
+Process 9 starts at time 8 ms
+Process Table:
+Process 3 is RUNNING.
+Process 5 is RUNNING.
+Process 7 is READY.
+
+Process 11 starts at time 13 ms
+Process Table:
+Process 3 is RUNNING.
+Process 5 is RUNNING.
+Process 7 is READY.
+Process 9 is READY.
+
+Process 7 terminates at time 593 ms.
+Process Table:
+Process 3 is RUNNING.
+Process 5 is READY.
+Process 7 is TERMINATED.
+Process 9 is RUNNING.
+Process 11 is READY.
+
+Process 5 terminates at time 7304 ms.
+Process Table:
+Process 3 is BLOCKED.
+Process 5 is TERMINATED.
+Process 9 is RUNNING.
+Process 11 is RUNNING.
+
+Process 9 terminates at time 7334 ms.
+Process Table:
+Process 3 is BLOCKED.
+Process 9 is TERMINATED.
+Process 11 is RUNNING.
+
+Process 11 terminates at time 7723 ms.
+Process Table:
+Process 3 is BLOCKED.
+Process 11 is TERMINATED.
+
+Process 3 terminates at time 11389 ms.
+Process Table:
+Process 3 is TERMINATED.
+
+SUMMARY:
+Total elapsed time: 11389 ms
+Number of processes that completed: 5
+Total number of SSD accesses: 90
+Average number of busy cores: 0.502
+SSD utilization: 0.003 
