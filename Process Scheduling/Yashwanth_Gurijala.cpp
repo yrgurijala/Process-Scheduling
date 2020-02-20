@@ -10,7 +10,7 @@
 //  Main.cpp
 //
 //  Created by Yashwanth Reddy Gurijala on 2/3/2020.
-//  Copyright © 2020 Yashwanth Reddy Gurijala. All rights reserved.
+//  Copyright Â© 2020 Yashwanth Reddy Gurijala. All rights reserved.
 //
 
 #include <fstream>
@@ -88,15 +88,39 @@ void checkNextCommand(int checkProcID)
 
 int main()
 {
+    string fileName;
+    ifstream inputFile;
+    bool checkInputFile = true;
+
+    while (checkInputFile)
+    {
+        try
+        {
+            cout << "Enter the name of the input file (ex:- input1.txt) \n";
+            cin >> fileName;
+
+            inputFile.open(fileName);
+
+            if (inputFile.fail())
+                throw fileName;
+
+            checkInputFile = false;
+        }
+        catch(string fileName)
+        {
+            cout << "File name entered is invalid or doesnt exist \n";
+        }
+    }
+
     string checkFileLine;
     int checkFileTime;
 
-    cin >>checkFileLine >> checkFileTime;
+    inputFile >>checkFileLine >> checkFileTime;
     noOfFreeCores = checkFileTime;
 
-    while (cin)
+    while (inputFile)
     {
-        cin >> checkFileLine;
+        inputFile >> checkFileLine;
 
         if (checkFileLine == "END")
         {
@@ -114,7 +138,7 @@ int main()
                 myCommands.clear();
             }
             
-            cin >> checkFileTime >> a1 >> b1;
+            inputFile >> checkFileTime >> a1 >> b1;
             myCommands.push(checkFileLine, checkFileTime);
             myCommands.push(a1, b1);
             myEvents.sortPush(checkFileTime, checkFileLine, b1, "non-interactive",checkFileTime);
@@ -122,11 +146,10 @@ int main()
         }
         else
         {
-            cin >> checkFileTime;
+            inputFile >> checkFileTime;
             myCommands.push(checkFileLine, checkFileTime);
         }
     }
-
     while (!myEvents.isItEmpty())
     {
         string checkCommand = myEvents.getTopCommand();
