@@ -1,0 +1,25 @@
+Process 0 starts at time 0 ms 
+Process Table: 
+There are no active processes 
+
+Process 1 starts at time 5 ms 
+Process Table: 
+Process 0 is RUNNING
+Process 0 is 
+
+Process 0 terminates at time 60 ms 
+Process Table: 
+Process 0 is TERMINATED
+Process 1 is RUNNING
+Process 0 is 
+
+Process 1 terminates at time 100 ms 
+Process Table: 
+Process 1 is TERMINATED
+
+SUMMARY: 
+Total Elapsed Time: 100ms 
+Number of processes that completed: 2
+Total number of SSD accesses: 0
+Average number of busy cores: 0.990
+SSD Utilization 0.000

@@ -1,0 +1,14 @@
+Process 23 starts at time 120 ms 
+Process Table: 
+There are no active processes 
+
+Process 23 terminates at time 5352 ms 
+Process Table: 
+Process 23 is TERMINATED
+
+SUMMARY: 
+Total Elapsed Time: 5352ms 
+Number of processes that completed: 1
+Total number of SSD accesses: 2
+Average number of busy cores: 0.043
+SSD Utilization 0.000
